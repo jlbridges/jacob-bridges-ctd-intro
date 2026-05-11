@@ -1,6 +1,6 @@
 html {
     color: rgb(68, 187, 227);
-    background-color: rgb(64, 9, 107);
+
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -19,7 +19,9 @@ h2 {
     color: burlywood;
 }
 
-body {}
+body {
+    background-color: rgb(64, 9, 107);
+}
 
 #name {
     transform: rotate(10deg);
@@ -38,12 +40,12 @@ body {}
     padding: 1em;
     margin: 1em;
     align-content: space-between;
+    display: flex;
 
 }
 
 #experience li {
-
-    display: block;
+    list-style: none;
     background-color: white;
     margin-right: 250px;
     margin: 2em;
