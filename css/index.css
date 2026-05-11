@@ -1,0 +1,72 @@
+html {
+    color: rgb(68, 187, 227);
+    background-color: rgb(64, 9, 107);
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 150;
+    color: rgb(175, 185, 194);
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 200;
+    color: burlywood;
+}
+
+body {}
+
+#name {
+    transform: rotate(10deg);
+
+}
+
+#about {
+    padding: 1em;
+    margin: 1em;
+    position: relative;
+    right: 20px;
+
+}
+
+#experience {
+    padding: 1em;
+    margin: 1em;
+    align-content: space-between;
+
+}
+
+#experience li {
+
+    display: block;
+    background-color: white;
+    margin-right: 250px;
+    margin: 2em;
+
+}
+
+#connect {
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+
+
+}
+
+#connect li {
+    display: block;
+    background-color: bisque;
+
+    margin: 2em;
+    position: relative;
+}
+
+a {
+    color: blueviolet;
+    font-weight: 700;
+}
