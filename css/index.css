@@ -1,74 +1,169 @@
-html {
-    color: rgb(68, 187, 227);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
 }
 
+
+img {
+    display: block;
+    min-width: 100px;
+}
+
+nav {
+
+    top: 0;
+    background-color: #f5f0eb;
+    margin-top: .5rem;
+    text-align: center;
+
+}
+
+header {
+    position: sticky;
+}
+
+#student {
+    display: flex;
+    text-align: center;
+}
+
+/*Change the font size, weight, and color of headings */
 h1 {
-    font-size: 30px;
-    font-weight: 150;
-    color: rgb(175, 185, 194);
+
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1a2f4e;
+
 }
+
+
+#name {
+
+    text-align: center;
+    width: 50%;
+    /* Transform the style of your Name at the top of the page  */
+    text-transform: uppercase;
+    margin: 0.5em;
+    margin-left: 1.5em;
+    padding: 0.5em;
+    line-height: 3em;
+
+
+}
+
 
 h2 {
-    font-size: 20px;
-    font-weight: 200;
-    color: burlywood;
+
+    font-size: 2rem;
+    font-weight: 100;
+    color: #2c5282;
+    letter-spacing: 0.1em;
+
 }
 
 body {
-    background-color: rgb(64, 9, 107);
+    /*  Change the background color of the page body */
+    background-color: #f5f0eb;
+
+    /*  Change the default text color */
+    color: #444444;
+    /*  Customize the font family */
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 550;
+    font-style: normal;
+
+
 }
 
-#name {
-    transform: rotate(10deg);
+#profile {
+    border-radius: 50%;
+    width: 20%;
+    height: auto;
+
+    margin: 0.5em;
+    padding: 0.2em;
 
 }
 
+
+
+
+/* Add spacing (padding/margin) between sections */
 #about {
-    padding: 1em;
+
     margin: 1em;
-    position: relative;
-    right: 20px;
+    padding: 1em;
+    /*Change the alignment of the content of one of your sections */
+    text-align: center;
+
+
 
 }
 
 #experience {
-    padding: 1em;
     margin: 1em;
-    align-content: space-between;
+    padding: 1em;
+
+    gap: 1rem;
+
+
+
+}
+
+
+
+
+#experience ul {
+    align-items: flex-end;
     display: flex;
+    margin-top: 0.5rem;
 
 }
 
 #experience li {
-    list-style: none;
-    background-color: white;
-    margin-right: 250px;
-    margin: 2em;
+    list-style-type: none;
+
+    justify-content: space-evenly;
+    margin-right: 1rem;
+
 
 }
 
-#connect {
-    padding: 1em;
-    margin: 1em;
-    display: flex;
 
+
+#connect {
+    margin: 1em;
+    padding: 1em;
+
+    text-align: center;
+
+
+}
+
+#connect ul {
+    margin-top: 0.5em;
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-evenly;
 
 }
 
 #connect li {
-    display: block;
-    background-color: bisque;
+    list-style: none;
+    padding: 0.2rem;
 
-    margin: 2em;
-    position: relative;
+
+
+
+
 }
 
-a {
-    color: blueviolet;
-    font-weight: 700;
+#connect li a {
+    color: #2b6cb0;
+    text-decoration: none;
+
+
 }
