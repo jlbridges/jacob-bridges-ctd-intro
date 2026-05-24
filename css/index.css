@@ -106,14 +106,8 @@ body {
 #experience {
     margin: 1em;
     padding: 1em;
-
     gap: 1rem;
-
-
-
 }
-
-
 
 
 #experience ul {
@@ -125,14 +119,28 @@ body {
 
 #experience li {
     list-style-type: none;
-
     justify-content: space-evenly;
     margin-right: 1rem;
 
-
 }
 
+#skills {
+    margin: 1em;
+    padding: 1em;
+    gap: 1rem;
+}
 
+#skills ul {
+    align-items: flex-end;
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+#skills li {
+    list-style-type: none;
+    justify-content: space-evenly;
+    margin-right: 1rem;
+}
 
 #connect {
     margin: 1em;
