@@ -175,3 +175,41 @@ body {
 
 
 }
+
+#message {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #444444;
+
+    width: 25%;
+}
+
+#message ul {
+    margin: 1em;
+    padding: 1em;
+    list-style-type: none;
+    width: 50%;
+}
+
+#message button {
+    margin: 1em;
+    padding: 1em;
+    border: solid red;
+
+}
+
+#message ul li {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #444444;
+
+    width: 50%;
+}
+
+form {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #444444;
+    list-style-type: none;
+    width: 25%;
+}
