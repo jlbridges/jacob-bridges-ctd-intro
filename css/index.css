@@ -176,7 +176,7 @@ body {
 
 }
 
-#message {
+#messages {
     margin: 1em;
     padding: 1em;
     border: 1px solid #444444;
@@ -184,21 +184,21 @@ body {
     width: 25%;
 }
 
-#message ul {
+#messages ul {
     margin: 1em;
     padding: 1em;
     list-style-type: none;
     width: 50%;
 }
 
-#message button {
+#messages button {
     margin: 1em;
     padding: 1em;
     border: solid red;
 
 }
 
-#message ul li {
+#messages ul li {
     margin: 1em;
     padding: 1em;
     border: 1px solid #444444;
