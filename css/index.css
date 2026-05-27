@@ -190,13 +190,16 @@ body {
     margin: 1em;
     padding: 1em;
     list-style-type: none;
-    width: 50%;
+    width: 100%;
+
 }
 
-#messages button {
+#messages ul button {
     margin: 1em;
-    padding: 1em;
+    padding: 0.5em;
     border: solid red;
+    display: block;
+
 
 }
 
@@ -216,7 +219,7 @@ form {
     width: 25%;
 }
 
-@media (max-width: 500px) {
+@media (width <=767px) {
 
     #messages,
     form {
