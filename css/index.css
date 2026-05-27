@@ -198,9 +198,7 @@ body {
     margin: 1em;
     padding: 0.5em;
     border: solid red;
-    display: block;
-
-
+    display: block
 }
 
 #messages ul li {
@@ -211,6 +209,10 @@ body {
     width: 50%;
 }
 
+label {
+    display: block;
+}
+
 form {
     margin: 1em;
     padding: 1em;
@@ -219,7 +221,7 @@ form {
     width: 25%;
 }
 
-@media (width <=767px) {
+@media (max-width: 767px) {
 
     #messages,
     form {

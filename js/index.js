@@ -30,9 +30,9 @@ for (let i = 0; i < skills.length; i++) {
 let messageForm = document.forms['leave_message']
 messageForm.addEventListener("submit", (event) => {
     event.preventDefault()
-    let name = event.target.usersName.value;
-    let email = event.target.usersEmail.value;
-    let message = event.target.usersMessage.value;
+    let name = event.target.usersName.value
+    let email = event.target.usersEmail.value
+    let message = event.target.usersMessage.value
     console.log(name, email, message)
 
     let messageSection = document.getElementById('messages')
