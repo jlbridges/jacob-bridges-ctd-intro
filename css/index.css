@@ -6,6 +6,8 @@
 }
 
 
+
+
 img {
     display: block;
     min-width: 100px;
@@ -174,4 +176,55 @@ body {
     text-decoration: none;
 
 
+}
+
+#messages {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #444444;
+
+    width: 25%;
+}
+
+#messages ul {
+    margin: 1em;
+    padding: 1em;
+    list-style-type: none;
+    width: 100%;
+
+}
+
+#messages ul button {
+    margin: 1em;
+    padding: 0.5em;
+    border: solid red;
+    display: block
+}
+
+#messages ul li {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #444444;
+
+    width: 50%;
+}
+
+label {
+    display: block;
+}
+
+form {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #444444;
+    list-style-type: none;
+    width: 25%;
+}
+
+@media (max-width: 767px) {
+
+    #messages,
+    form {
+        width: 90%;
+    }
 }
