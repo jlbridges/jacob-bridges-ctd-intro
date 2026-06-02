@@ -141,7 +141,11 @@ body {
 #skills li {
     list-style-type: none;
     justify-content: space-evenly;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
     margin-right: 1rem;
+    border-right: 1px solid #8a9bb5;
+
 }
 
 #connect {
@@ -227,4 +231,30 @@ form {
     form {
         width: 90%;
     }
+}
+
+#projects {
+    margin: 1em;
+    padding: 1em;
+    gap: 1rem;
+}
+
+#projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+#projects li {
+    display: inline;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
+    border-right: 1px solid #8a9bb5;
+}
+
+#projects li:last-child {
+    border-right: none;
+}
+
+#skills li:last-child {
+    border-right: none;
 }

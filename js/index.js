@@ -56,3 +56,24 @@ messageForm.addEventListener("submit", (event) => {
 
 
 
+fetch('https://api.github.com/users/jlbridges/repos')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (response) {
+
+        console.log(response);
+
+        const projectSection = document.querySelector('#projects');
+        const projectList = projectSection.querySelector('ul');
+
+        for (let i = 0; i < response.length; i++) {
+            const project = document.createElement('li');
+            project.innerText = response[i].name;
+            projectList.appendChild(project);
+        }
+    })
+    .catch(function (error) {
+        console.error('An error occurred:', error);
+    });
+
