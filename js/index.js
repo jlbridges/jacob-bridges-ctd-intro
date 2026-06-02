@@ -61,19 +61,23 @@ fetch('https://api.github.com/users/jlbridges/repos')
         return response.json();
     })
     .then(function (response) {
-
-        console.log(response);
+        const repositories = response
+        console.log(repositories);
 
         const projectSection = document.querySelector('#projects');
         const projectList = projectSection.querySelector('ul');
 
-        for (let i = 0; i < response.length; i++) {
+        for (let i = 0; i < repositories.length; i++) {
             const project = document.createElement('li');
-            project.innerText = response[i].name;
+            project.textContent = repositories[i].name;
             projectList.appendChild(project);
         }
     })
     .catch(function (error) {
-        console.error('An error occurred:', error);
+        console.error('Failed to get Github projects:', error);
+        const projectsSection = document.querySelector('#projects');
+        const errorMsg = document.createElement('p');
+        errorMsg.innerHTML = 'Projects could not load. <a href="https://github.com/jlbridges"> Please click here to go to my Github repos.</a>';
+        projectsSection.appendChild(errorMsg);
     });
 
