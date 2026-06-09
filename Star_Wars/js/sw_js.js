@@ -42,6 +42,7 @@ if the response is anything other 'ok', call makeURL again to get a different id
 if response message is okay, await the response and call parseResult to get the data properties I want
 */
 async function getData(url, category) {
+    columns.innerHTML = "Loading..."
     try {
         const response = await fetch(url)
         if (!response.ok) {

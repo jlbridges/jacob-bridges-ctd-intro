@@ -5,6 +5,11 @@
 
 }
 
+@font-face {
+    font-family: 'StarJedi';
+    src: url('../fonts/DISTGRG_.ttf') format('truetype');
+}
+
 body {
     background-image: url('../img/background.jpg');
     background-size: cover;
@@ -13,10 +18,12 @@ body {
 }
 
 #banner {
+    font-family: 'StarJedi', sans-serif;
     text-align: center;
     border: solid white;
-    background-color: aqua;
-    opacity: 0.5;
+    color: #FFE81F;
+    background-color: rgb(26 58 92/50%);
+
     margin-bottom: 0.5em;
 }
 
@@ -45,6 +52,7 @@ body {
     border: white solid;
     color: whitesmoke;
     background-color: rgb(13 27 42 /50%);
+    font-family: 'StarJedi', sans-serif;
 
 }
 
@@ -65,23 +73,37 @@ body {
 }
 
 
+#table-results {
+    margin: 0.5em;
+    padding: 0.5em;
+    border: solid red;
+    background-color: rgb(255 255 255 /10%);
+    backdrop-filter: blur(8px);
+}
 
-#table-results {}
 
 #columns {
-    background-color: aqua;
+    background-color: #1A3A5C;
+
 
 
 }
 
 #columns th {
-    color: red;
+    color: #FFE81F;
+    letter-spacing: 0.1em;
+    border-right: 1px solid #4A90D9;
+    font-family: 'StarJedi', sans-serif;
 
 }
 
-#rows {}
+
+
 
 #rows td {
-    background-color: bisque;
+    background-color: #0D1B2A;
+    color: #F5F5F5;
+    border-right: 1px solid #4A90D9;
+    padding: 0.5em;
 
 }
