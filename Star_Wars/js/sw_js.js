@@ -42,6 +42,7 @@ if the response is anything other 'ok', call makeURL again to get a different id
 if response message is okay, await the response and call parseResult to get the data properties I want
 */
 async function getData(url, category) {
+    const columns = document.getElementById('columns')
     columns.innerHTML = "Loading..."
     try {
         const response = await fetch(url)
@@ -49,7 +50,7 @@ async function getData(url, category) {
             makeURL(category)
         } else {
             const data = await response.json()
-            result = data.result.properties
+            let result = data.result.properties
             parseResult(result)
         }
 
@@ -61,15 +62,15 @@ async function getData(url, category) {
 }
 
 async function parseResult(result) {
-    resultList = []
+    let resultList = []
 
 
     for (const [key, value] of Object.entries(result)) {
         if (Array.isArray(value)) {
-            hideArray = value
+            let hideArray = value
             //getNewResult = await newResult()
         } else if (key === 'homeworld') {
-            new_value = await replaceURL(value)
+            let new_value = await replaceURL(value)
             resultList.push([key, new_value])
 
         } else resultList.push([key, value]);
