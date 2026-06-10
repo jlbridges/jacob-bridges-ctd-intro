@@ -1,6 +1,7 @@
 const BASE_URL = "https://www.swapi.tech/api";
 const tabs = document.querySelectorAll('[data-category]')
 const tabContents = document.querySelectorAll('.tab')
+const dataTabContent = document.querySelector('[data-tab-content]')
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
 
@@ -17,6 +18,7 @@ tabs.forEach(tab => {
             tab.classList.remove('active')
         })
         tab.classList.add('active')
+        dataTabContent.classList.add('active')
 
     })
 })
@@ -131,7 +133,7 @@ async function replaceURL(url) {
 
 
 
-    result = data.result.properties.name
+    let result = data.result.properties.name
     return result
 
 
