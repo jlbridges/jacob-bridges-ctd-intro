@@ -4,8 +4,9 @@ const tabContents = document.querySelectorAll('.tab')
 const dataTabContent = document.querySelector('[data-tab-content]')
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-        columns.innerHTML = ""
-        rows.innerHTML = ""
+        document.getElementById("columns").innerHTML = ""
+        document.getElementById("rows").innerHTML = "<td>Loading...</td>"
+
         const target = tab.dataset.category
         //remove the pound from the tab ID
         const category = target.replace('#', '')
@@ -41,7 +42,6 @@ function makeURL(category) {
         build_url = `${BASE_URL}/${category}/${randId}`;
         getData(build_url, category)
     } else {
-        console.log('category not film')
         fetch(build_url)
             .then(function (response) {
 
@@ -73,7 +73,7 @@ if response message is okay, await the response and call parseResult to get the 
 */
 async function getData(url, category) {
     const columns = document.getElementById('columns')
-    columns.innerHTML = "Loading..."
+
     try {
         const response = await fetch(url)
         if (!response.ok) {
