@@ -4,7 +4,8 @@ const tabContents = document.querySelectorAll('.tab')
 const dataTabContent = document.querySelector('[data-tab-content]')
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-
+        columns.innerHTML = ""
+        rows.innerHTML = ""
         const target = tab.dataset.category
         //remove the pound from the tab ID
         const category = target.replace('#', '')
@@ -31,10 +32,37 @@ randId creates a random whole number between 1-20
 call getData and pass in url and category clicked
 */
 function makeURL(category) {
-    let randId = Math.floor(Math.random() * 20) + 1;
-    const build_url = `${BASE_URL}/${category}/${randId}`;
-    console.log(build_url)
-    getData(build_url, category)
+    let randId;
+    //refactor to set url to include expanded parameter 
+    let build_url = `${BASE_URL}/${category}/?expanded=true`;
+
+    if (category === 'films') {
+        randId = Math.floor(Math.random() * 6) + 1;
+        build_url = `${BASE_URL}/${category}/${randId}`;
+        getData(build_url, category)
+    } else {
+        console.log('category not film')
+        fetch(build_url)
+            .then(function (response) {
+
+                return response.json()
+            })
+            .then(function (data) {
+                randId = Math.floor(Math.random() * Number(data.total_records)) + 1;
+                console.log(randId)
+                build_url = `${BASE_URL}/${category}/${randId}`;
+                console.log(build_url)
+                getData(build_url, category)
+            })
+            .catch(err => console.error(err))
+
+
+
+    }
+
+
+
+
 
 }
 
