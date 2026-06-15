@@ -1,11 +1,33 @@
+/* Reset margin, padding, and box sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
+/* background, text color, and font styles */
+body {
+    background-color: #f5f0eb;
+    color: #444444;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 550;
+    font-style: normal;
 }
 
 
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1a2f4e;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 100;
+    color: #2c5282;
+    letter-spacing: 0.1em;
+}
 
 
 img {
@@ -13,97 +35,55 @@ img {
     min-width: 100px;
 }
 
-nav {
+/* Nav and profile styling  */
 
+/* Sticky navigation bar */
+header {
+    position: sticky;
+}
+
+nav {
     top: 0;
     background-color: #f5f0eb;
     margin-top: .5rem;
     text-align: center;
-
 }
 
-header {
-    position: sticky;
-}
 
 #student {
     display: flex;
     text-align: center;
 }
 
-/*Change the font size, weight, and color of headings */
-h1 {
-
-    font-size: 3rem;
-    font-weight: 900;
-    color: #1a2f4e;
-
-}
-
-
-#name {
-
-    text-align: center;
-    width: 50%;
-    /* Transform the style of your Name at the top of the page  */
-    text-transform: uppercase;
-    margin: 0.5em;
-    margin-left: 1.5em;
-    padding: 0.5em;
-    line-height: 3em;
-
-
-}
-
-
-h2 {
-
-    font-size: 2rem;
-    font-weight: 100;
-    color: #2c5282;
-    letter-spacing: 0.1em;
-
-}
-
-body {
-    /*  Change the background color of the page body */
-    background-color: #f5f0eb;
-
-    /*  Change the default text color */
-    color: #444444;
-    /*  Customize the font family */
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 550;
-    font-style: normal;
-
-
-}
 
 #profile {
     border-radius: 50%;
     width: 20%;
     height: auto;
-
     margin: 0.5em;
     padding: 0.2em;
-
 }
 
 
+#name {
+    text-align: center;
+    width: 50%;
+    text-transform: uppercase;
+    margin: 0.5em;
+    margin-left: 1.5em;
+    padding: 0.5em;
+    line-height: 3em;
+}
 
+/* About */
 
-/* Add spacing (padding/margin) between sections */
 #about {
-
     margin: 1em;
     padding: 1em;
-    /*Change the alignment of the content of one of your sections */
     text-align: center;
-
-
-
 }
+
+/* Experience Section*/
 
 #experience {
     margin: 1em;
@@ -116,15 +96,15 @@ body {
     align-items: flex-end;
     display: flex;
     margin-top: 0.5rem;
-
 }
 
 #experience li {
     list-style-type: none;
     justify-content: space-evenly;
     margin-right: 1rem;
-
 }
+
+/*Skills section  */
 
 #skills {
     margin: 1em;
@@ -132,12 +112,14 @@ body {
     gap: 1rem;
 }
 
+
 #skills ul {
     align-items: flex-end;
     display: flex;
     margin-top: 0.5rem;
 }
 
+/* Skills list items with dividers */
 #skills li {
     list-style-type: none;
     justify-content: space-evenly;
@@ -145,73 +127,66 @@ body {
     margin-right: 0.5em;
     margin-right: 1rem;
     border-right: 1px solid #8a9bb5;
-
 }
+
+/* Remove border from last skill item */
+#skills li:last-child {
+    border-right: none;
+}
+
+/* Projects */
+
+#projects {
+    margin: 1em;
+    padding: 1em;
+    gap: 1rem;
+}
+
+#projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Project list items with dividers */
+#projects li {
+    display: inline;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
+    border-right: 1px solid #8a9bb5;
+}
+
+/* Remove border from last project item */
+#projects li:last-child {
+    border-right: none;
+}
+
+/* connect */
 
 #connect {
     margin: 1em;
     padding: 1em;
-
     text-align: center;
-
-
 }
 
+/* Flexbox layout */
 #connect ul {
     margin-top: 0.5em;
     align-items: flex-end;
     display: flex;
     justify-content: space-evenly;
-
 }
 
 #connect li {
     list-style: none;
     padding: 0.2rem;
-
-
-
-
-
 }
 
 #connect li a {
     color: #2b6cb0;
     text-decoration: none;
-
-
 }
 
-#messages {
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid #444444;
-
-    width: 25%;
-}
-
-#messages ul {
-    margin: 1em;
-    padding: 1em;
-    list-style-type: none;
-    width: 100%;
-
-}
-
-#messages ul button {
-    margin: 1em;
-    padding: 0.5em;
-    border: solid red;
-    display: block
-}
-
-#messages ul li {
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid #444444;
-
-    width: 50%;
-}
+/* message form */
 
 label {
     display: block;
@@ -225,36 +200,44 @@ form {
     width: 25%;
 }
 
+/* comment section */
+
+#messages {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #444444;
+    width: 25%;
+}
+
+#messages ul {
+    margin: 1em;
+    padding: 1em;
+    list-style-type: none;
+    width: 100%;
+}
+
+/* Remove button  */
+#messages ul button {
+    margin: 1em;
+    padding: 0.5em;
+    border: solid red;
+    display: block
+}
+
+/* message list items */
+#messages ul li {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #444444;
+    width: 50%;
+}
+
+/* media query */
+
 @media (max-width: 767px) {
 
     #messages,
     form {
         width: 90%;
     }
-}
-
-#projects {
-    margin: 1em;
-    padding: 1em;
-    gap: 1rem;
-}
-
-#projects ul {
-    list-style: none;
-    padding: 0;
-}
-
-#projects li {
-    display: inline;
-    padding-right: 0.5em;
-    margin-right: 0.5em;
-    border-right: 1px solid #8a9bb5;
-}
-
-#projects li:last-child {
-    border-right: none;
-}
-
-#skills li:last-child {
-    border-right: none;
 }

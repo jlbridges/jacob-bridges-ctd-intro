@@ -10,7 +10,7 @@ let thisYear = today.getFullYear()
 
 let footer = document.querySelector('footer')
 let copyright = document.createElement('p')
-copyright.innerHTML = `Jacob Bridges ${thisYear}`
+copyright.innerHTML = `&copy;Jacob Bridges ${thisYear}`
 footer.appendChild(copyright)
 
 /*Create List of Skills*/
